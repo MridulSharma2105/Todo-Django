@@ -1,0 +1,19 @@
+# Python cache
+todo_site/__pycache__/
+*.py[cod]
+
+# Database
+db.sqlite3
+
+# IDE files (add if you use any)
+.vscode/
+.idea/
+
+# Static assets (add if necessary)
+staticfiles/
+
+# Environment settings (if applicable)
+.env
+
+# Media (if applicable)
+media/

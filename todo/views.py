@@ -3,7 +3,7 @@ from django.contrib import messages
 
 # import todo form and models
 
-from .forms import TodoForm
+from .forms import TodoForms
 from .models import Todo
 
 # Create your views here.
@@ -11,11 +11,11 @@ from .models import Todo
 def index(request):
     item_list = Todo.objects.order_by("-date")
     if (request.method == 'POST'):
-        form = TodoForm(request.POST)
+        form = TodoForms(request.POST)
         if form.is_valid():
             form.save()
             return redirect('todo')
-    form = TodoForm()
+    form = TodoForms()
     
     page = {
         "forms" : form,
